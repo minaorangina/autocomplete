@@ -5,7 +5,7 @@ assert.equal(typeof ac, 'object');
 assert.equal(typeof ac.import, 'function');
 
 console.log("#test: ac.import imports a list of words into memory");
-ac.import(function (words) {
+ac.import(function (err, words) {
   console.log("words.txt had " + words.length + " words in it");
   assert.equal(words.length, 235887);
 });
@@ -14,15 +14,27 @@ console.log("#test: attempt to invoke ac.import without a valid callback");
 var error = ac.import('string');
 assert.equal(error.message, 'callback argument MUST be a function');
 
-
-
 ac.import(function(){
   console.log('#test: ac.findWord finds a string in words array');
   ac.findWord('awes', function (err, found){
+    console.log(found);
     assert.equal(err, null);
     assert.equal(found.length, 4);
   });
-})
+});
+
+
+ac.import(function(){
+  console.log('#test: ac.stats tracks which words/string were searched for');
+  ac.stats('rubies', function (err, stats){
+    console.log(stats);
+    assert.equal(stats['rubies'].length, 1);
+    ac.stats('rubies', function (err, stats){
+      console.log(stats);
+      assert.equal(stats['rubies'].length, 2);
+    });
+  });
+});
 
 //index.js
 // ac.import is a function
