@@ -1,0 +1,28 @@
+{
+  "name": "autocomplete-fac",
+  "version": "1.0.0",
+  "description": "find words in English dictionary with auto suggestion",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minaorangina/autocomplete.git"
+  },
+  "keywords": [
+    "autocomplete",
+    "english",
+    "dictionary",
+    "suggestions"
+  ],
+  "author": "minaorangina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minaorangina/autocomplete/issues"
+  },
+  "homepage": "https://github.com/minaorangina/autocomplete"
+}
