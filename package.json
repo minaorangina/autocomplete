@@ -1,5 +1,5 @@
 {
-  "name": "autocomplete-new",
+  "name": "autocomplete-fac",
   "version": "1.0.1",
   "description": "find words in English dictionary with auto suggestion",
   "main": "index.js",
