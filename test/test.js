@@ -42,11 +42,12 @@ ac.import(function(){
 // this parameter is our callback function
 // ac.import does some stuff
 // at the end of ac.import, the callback is called
-// the callback is called with the stuff ac.import did
+// the callback passed the stuff ac.import did
 
 //test.js
 // when we call ac.import, it takes a function
 // (this function plugs into callback)
 // this function will automatically have:
 // the stuff that was given to the callback (when we defined ac.import)
-// here, parameter passed to the callback function here is a placeholder/reference to the actual stuff we were given by ac.import
+// here, parameter passed to the callback function is a placeholder/reference...
+//...to the actual stuff we were given by ac.import
